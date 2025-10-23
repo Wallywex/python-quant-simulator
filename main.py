@@ -2,9 +2,7 @@ import random
 import matplotlib.pyplot as plt
 import numpy as np
 
-# --- Part 1: The Simulator ---
-
-# --- Part 1: The Simulator ---
+#  Part 1: The Simulator
 
 def simulate(num_trials):
     """
@@ -18,7 +16,7 @@ def simulate(num_trials):
     # The cost to play one round
     cost_to_play = 2 
 
-    print(f"--- Running Simulation ({num_trials:,} trials) ---")
+    print(f"Running Simulation ({num_trials:,} trials)...")
 
     for _ in range(num_trials):
         
@@ -42,7 +40,7 @@ def simulate(num_trials):
         # Add this game's final result to our list
         results_per_game.append(net_result_this_game)
     
-    # --- Print Simulation Report ---
+    # Print Simulation Report
     total_net_profit_loss = sum(results_per_game)
     avg_profit_loss_per_game = total_net_profit_loss / num_trials
     
@@ -52,14 +50,14 @@ def simulate(num_trials):
     # Return the full list of results for plotting
     return results_per_game
 
-    # --- Part 2: The Calculator (Expected Value) ---
+    # Part 2: The Calculator (Expected Value)
 
 def calculate_ev():
     """
     Calculates the precise mathematical Expected Value (EV) of one round.
     """
     
-    print("\n--- Calculating Mathematical EV ---")
+    print("\nCalculating Mathematical EV...")
 
     # 1. Define Costs and Payouts
     cost_to_play = 2
@@ -97,14 +95,14 @@ def calculate_ev():
     print(f"NET Expected Value (EV): ${ev:,.4f}")
 
 
-# --- Part 3: The Plotter ---
+# Part 3: The Plotter
 
 def create_histogram(results):
     """
     Takes a list of simulation results and creates a histogram.
     """
     
-    print("\n--- Generating Plot ---")
+    print("\n Generating Plot...")
 
     # Convert results to a NumPy array for easier plotting
     results_array = np.array(results)
@@ -134,23 +132,22 @@ def create_histogram(results):
     plt.savefig(output_filename)
     
     print(f"Plot successfully saved as '{output_filename}'")
-    # plt.show() # Optional: un-comment this line if you want the plot to pop up
+    
 
 
-    # --- Run the Program ---
-# --- Run the Program ---
-# --- Run the Program ---
+
+#  Run the Program
 if __name__ == "__main__":
     
     # Set the number of trials you want to run
     trials_to_run = 1_000_000
     
-    # Run Part 1
-    # This now returns the list of all game results
+    # Running Part 1
+    
     all_game_results = simulate(trials_to_run)
     
-    # Run Part 2
+    # Running Part 2
     calculate_ev()
     
-    # Run Part 3
+    # Running Part 3
     create_histogram(all_game_results)

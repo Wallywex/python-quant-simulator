@@ -2,7 +2,7 @@
 
 This is a command-line application, written in Python, designed to analyze the profitability of a simple two-dice casino game.
 
-This project was built to demonstrat my core skills in algorithmic thinking, quantitative analysis, and data visualization. It models the game in three ways:
+This project was built to demonstrate my core skills in algorithmic thinking, quantitative analysis, and data visualization. It models the game in three ways:
 
 1.  **Monte Carlo Simulation:** A simulator (`simulate()`) runs the game 1,000,000 times to find the empirical, real-world profit/loss.
 2.  **Mathematical Calculation:** An expected value calculator (`calculate_ev()`) uses pure probability to determine the precise mathematical "Expected Value" (EV) of a single game.
